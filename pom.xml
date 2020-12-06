@@ -20,6 +20,7 @@
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <h2.version>1.4.199</h2.version>
         <log4j.version>2.8.2</log4j.version>
+        <springfox.version>2.8.0</springfox.version>
     </properties>
 
     <dependencies>
@@ -103,6 +104,20 @@
             <artifactId>mockito-junit-jupiter</artifactId>
             <version>${mockito.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- Swagger doc-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox.version}</version>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>
