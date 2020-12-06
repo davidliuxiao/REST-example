@@ -3,6 +3,7 @@ package com.roche.product.server.endpoints.product;
 import com.roche.product.server.domains.product.Product;
 import com.roche.product.server.domains.product.ProductNotFoundException;
 import com.roche.product.server.domains.product.ProductService;
+import com.roche.product.server.dtos.product.ProductDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
