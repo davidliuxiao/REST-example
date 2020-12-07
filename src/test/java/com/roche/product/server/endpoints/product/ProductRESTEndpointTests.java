@@ -113,7 +113,7 @@ public class ProductRESTEndpointTests {
     public void deleteProductFail() throws Exception {
         givenDeleteNonExistProductThrowsException();
         this.mockMvc.perform(delete(API_PATH + PRODUCT_ID_NON_EXIST))
-                .andExpect(status().isNoContent())
+                .andExpect(status().isNotFound())
                 .andExpect(content().string(productNonExistError));
     }
 
@@ -123,7 +123,7 @@ public class ProductRESTEndpointTests {
         this.mockMvc.perform(put(API_PATH + PRODUCT_ID_NON_EXIST)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(jsonProduct.write(updatedProductDto).getJson()))
-                .andExpect(status().isNoContent())
+                .andExpect(status().isNotFound())
                 .andExpect(content().string(productNonExistError));
     }
 
